@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:new_app/Pages/dashboard.dart';
 import 'package:new_app/Pages/education.dart';
 import 'package:new_app/Pages/experience.dart';
+import 'package:new_app/Pages/tools.dart';
 import 'package:new_app/utils/drawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -14,6 +16,7 @@ class HomePage extends StatefulWidget {
     Dashboard(), //For Home
     Experience(), //For Experience
     Education(),
+    Tools(),
   ];
 
   @override
@@ -55,6 +58,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'Education',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.settings),
+            label: 'Tools',
           ),
         ],
         currentIndex: _selectedIndex,

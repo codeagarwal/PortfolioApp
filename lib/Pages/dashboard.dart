@@ -27,7 +27,7 @@ class Dashboard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     SizedBox(height: 50.0),
-                    "I'm".text.xl3.bold.make().objectCenterLeft().px32(),
+                    "I'm a".text.xl3.bold.make().objectCenterLeft().px32(),
                     SizedBox(height: 100.0),
                     DefaultTextStyle(
                       style: TextStyle(
@@ -44,8 +44,6 @@ class Dashboard extends StatelessWidget {
                           RotateAnimatedText('AI Innovator',
                               transitionHeight: 90),
                           RotateAnimatedText('Blogger', transitionHeight: 90),
-                          //RotateAnimatedText('Innovator'),
-                          //RotateAnimatedText('Innovator'),
                         ],
                       ),
                     ),
