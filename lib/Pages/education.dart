@@ -12,12 +12,7 @@ class Education extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: "Education"
-                  .text
-                  .headline2(context)
-                  .white
-                  .make()
-                  .objectTopCenter(),
+              child: "Education".text.xl6.make().objectTopCenter(),
             ),
             Row(
               children: [
