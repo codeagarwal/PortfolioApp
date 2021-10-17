@@ -1,7 +1,20 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:new_app/Pages/about.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyDrawer extends StatelessWidget {
+  static const _url = 'https://codeagarwal.github.io/';
+  static const _url1 = 'http://thetechbeanz.com/';
+  static const _url2 = 'https://www.linkedin.com/in/codeagarwal/';
+  static const _url3 = 'https://github.com/codeagarwal';
+  static const _url4 = 'https://twitter.com/m_agg02';
+  static const _url5 = 'https://www.instagram.com/mayank.io/';
+  static const _url6 = 'https://tech-mayank.medium.com/';
+
   @override
   Widget build(BuildContext context) {
     final imageUrl =
@@ -24,57 +37,95 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            ListTile(
-              title: "Portfolio".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            const SizedBox(height: 15),
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: _launchURL,
+              child: 'Portfolio'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
-            ListTile(
-              title: "TechBeanz".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: _launchURL1,
+              child: 'TechBeanz'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
-            ListTile(
-              title: "LinkedIn".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: _launchURL2,
+              child: 'LinkedIn'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
-            ListTile(
-              title: "GitHub".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: _launchURL3,
+              child: 'GitHub'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
-            ListTile(
-              title: "Twitter".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: _launchURL4,
+              child: 'Twitter'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
-            ListTile(
-              title: "Instagram".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: _launchURL5,
+              child: 'Instagram'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
-            ListTile(
-              title: "Medium Blogs".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: _launchURL6,
+              child:
+                  'Medium Blogs'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
-            ListTile(
-              title: "About".text.xl2.make(),
-              onTap: () {
-                Navigator.pop(context);
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => About()));
               },
+              child: 'About'.text.xl2.white.make().objectCenterLeft().px8(),
+            ),
+            SizedBox(
+              height: 10,
             ),
           ],
         ),
       ),
     );
   }
+
+  void _launchURL() async => await canLaunch(_url)
+      ? await launch(_url)
+      : throw 'Could not launch $_url';
+  void _launchURL1() async => await canLaunch(_url1)
+      ? await launch(_url1)
+      : throw 'Could not launch $_url1';
+  void _launchURL2() async => await canLaunch(_url2)
+      ? await launch(_url2)
+      : throw 'Could not launch $_url2';
+  void _launchURL3() async => await canLaunch(_url3)
+      ? await launch(_url3)
+      : throw 'Could not launch $_url3';
+  void _launchURL4() async => await canLaunch(_url4)
+      ? await launch(_url4)
+      : throw 'Could not launch $_url4';
+  void _launchURL5() async => await canLaunch(_url5)
+      ? await launch(_url5)
+      : throw 'Could not launch $_url5';
+  void _launchURL6() async => await canLaunch(_url6)
+      ? await launch(_url6)
+      : throw 'Could not launch $_url6';
 }
