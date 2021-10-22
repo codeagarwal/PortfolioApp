@@ -33,7 +33,7 @@ class MyDrawer extends StatelessWidget {
                 accountName: Text("Mayank Agarwal"),
                 accountEmail: Text("agarwalmayank319@gmail.com"),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(imageUrl),
+                  backgroundImage: AssetImage("assets/images/aa.jpg"),
                 ),
               ),
             ),
@@ -99,7 +99,11 @@ class MyDrawer extends StatelessWidget {
               child: 'About'.text.xl2.white.make().objectCenterLeft().px8(),
             ),
             SizedBox(
-              height: 10,
+              height: 15,
+            ),
+            "App Version 1.0.1".text.gray500.make().objectCenter(),
+            SizedBox(
+              height: 25,
             ),
           ],
         ),

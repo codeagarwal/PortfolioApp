@@ -19,23 +19,23 @@ class Tools extends StatelessWidget {
                     style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                   ),
                 ),
+                SizedBox(
+                  height: 15,
+                ),
                 Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, top: 10),
-                      child: new Image.asset(
-                        "assets/icons/aa.png",
-                        height: 120,
-                        width: 120,
-                      ),
-                    ),
                     new Image.asset(
-                      "assets/icons/aws.png",
+                      "assets/icons/aa.png",
                       height: 120,
                       width: 120,
-                    ).pOnly(left: 70, right: 20),
+                    ),
+                    new Image.asset(
+                      "assets/icons/py.png",
+                      height: 120,
+                      width: 120,
+                    ).pOnly(left: 80, right: 20),
                   ],
-                ).pOnly(left: 50, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "Android"
@@ -44,11 +44,7 @@ class Tools extends StatelessWidget {
                         .make()
                         .objectCenterLeft()
                         .pOnly(left: 60, top: 10),
-                    "Amazon Web Services"
-                        .text
-                        .xl
-                        .make()
-                        .pOnly(left: 90, top: 10),
+                    "Python".text.xl.make().pOnly(left: 130, top: 10),
                   ],
                 ),
                 SizedBox(
@@ -68,9 +64,9 @@ class Tools extends StatelessWidget {
                       "assets/icons/r.png",
                       height: 150,
                       width: 150,
-                    ).pOnly(left: 70, right: 20),
+                    ).pOnly(left: 75, right: 20),
                   ],
-                ).pOnly(left: 30, right: 0),
+                ).pOnly(left: 15, right: 10),
                 Row(
                   children: [
                     "C++"
@@ -79,7 +75,7 @@ class Tools extends StatelessWidget {
                         .make()
                         .objectCenterLeft()
                         .pOnly(left: 60, top: 10),
-                    "React".text.xl.make().pOnly(left: 200, top: 10),
+                    "React".text.xl.make().pOnly(left: 190, top: 10),
                   ],
                 ),
                 SizedBox(
@@ -99,9 +95,9 @@ class Tools extends StatelessWidget {
                       "assets/icons/dart.png",
                       height: 120,
                       width: 120,
-                    ).pOnly(left: 70, right: 20),
+                    ).pOnly(left: 80, right: 20),
                   ],
-                ).pOnly(left: 50, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "Flutter"
@@ -130,9 +126,9 @@ class Tools extends StatelessWidget {
                       "assets/icons/fb.png",
                       height: 120,
                       width: 120,
-                    ).pOnly(left: 70, right: 20),
+                    ).pOnly(left: 80, right: 20),
                   ],
-                ).pOnly(left: 50, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "Docker"
@@ -161,9 +157,9 @@ class Tools extends StatelessWidget {
                       "assets/icons/gc.png",
                       height: 120,
                       width: 120,
-                    ).pOnly(left: 70, right: 20),
+                    ).pOnly(left: 80, right: 20),
                   ],
-                ).pOnly(left: 50, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "Action on Google"
@@ -171,7 +167,7 @@ class Tools extends StatelessWidget {
                         .xl
                         .make()
                         .objectCenterLeft()
-                        .pOnly(left: 60, top: 10),
+                        .pOnly(left: 40, top: 10),
                     "GCP".text.xl.make().pOnly(left: 100, top: 10),
                   ],
                 ),
@@ -192,9 +188,9 @@ class Tools extends StatelessWidget {
                       "assets/icons/java.png",
                       height: 120,
                       width: 120,
-                    ).pOnly(left: 70, right: 20),
+                    ).pOnly(left: 80, right: 20),
                   ],
-                ).pOnly(left: 50, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "Git Lab"
@@ -225,7 +221,7 @@ class Tools extends StatelessWidget {
                       width: 120,
                     ).pOnly(left: 80, right: 20),
                   ],
-                ).pOnly(left: 40, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "Kubernetes"
@@ -233,8 +229,8 @@ class Tools extends StatelessWidget {
                         .xl
                         .make()
                         .objectCenterLeft()
-                        .pOnly(left: 70, top: 10),
-                    "Kotlin".text.xl.make().pOnly(left: 120, top: 10),
+                        .pOnly(left: 50, top: 10),
+                    "Kotlin".text.xl.make().pOnly(left: 140, top: 10),
                   ],
                 ),
                 SizedBox(
@@ -251,12 +247,12 @@ class Tools extends StatelessWidget {
                       ),
                     ),
                     new Image.asset(
-                      "assets/icons/py.png",
+                      "assets/icons/aws.png",
                       height: 120,
                       width: 120,
-                    ).pOnly(left: 70, right: 20),
+                    ).pOnly(left: 80, right: 20),
                   ],
-                ).pOnly(left: 50, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "Microsoft Azure"
@@ -264,8 +260,8 @@ class Tools extends StatelessWidget {
                         .xl
                         .make()
                         .objectCenterLeft()
-                        .pOnly(left: 70, top: 10),
-                    "Python".text.xl.make().pOnly(left: 95, top: 10),
+                        .pOnly(left: 50, top: 10),
+                    "AWS".text.xl.make().pOnly(left: 90, top: 10),
                   ],
                 ),
                 SizedBox(
@@ -285,9 +281,9 @@ class Tools extends StatelessWidget {
                       "assets/icons/jp.png",
                       height: 120,
                       width: 120,
-                    ).pOnly(left: 70, right: 20),
+                    ).pOnly(left: 60, right: 20),
                   ],
-                ).pOnly(left: 50, right: 20),
+                ).pOnly(left: 20, right: 20),
                 Row(
                   children: [
                     "TensorFlow"
@@ -295,7 +291,7 @@ class Tools extends StatelessWidget {
                         .xl
                         .make()
                         .objectCenterLeft()
-                        .pOnly(left: 60, top: 10),
+                        .pOnly(left: 50, top: 10),
                     "Jupyter NoteBook".text.xl.make().pOnly(left: 90, top: 10),
                   ],
                 ),

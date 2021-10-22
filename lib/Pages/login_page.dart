@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_app/Pages/home_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,46 +9,48 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final imageurl = "https://avatars.githubusercontent.com/u/75745500?v=4";
-
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: SingleChildScrollView(
-        child: Form(
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Center(
           child: Column(
             children: [
-              SafeArea(child: Image.network(imageurl)),
-              SizedBox(
-                height: 35,
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: CircleAvatar(
+                  maxRadius: 100,
+                  backgroundImage: AssetImage("assets/images/pic.png"),
+                ),
               ),
-              "Mayank Agarwal".text.bold.italic.xl5.make(),
-              "Student at NIET Greater Noida".text.xl.gray500.make(),
-              SizedBox(
-                height: 35,
-              ),
-              "Skills -".text.xl3.make().objectBottomLeft().px24(),
-              SizedBox(
-                height: 10,
-              ),
-              "1. Android Developer".text.xl2.make().objectBottomLeft().px24(),
-              "2. Flutter Developer".text.xl2.make().objectBottomLeft().px24(),
-              "3. Action on Google".text.xl2.make().objectBottomLeft().px24(),
-              "4. Firebase".text.xl2.make().objectBottomLeft().px24(),
-              "5. Cloud Technology".text.xl2.make().objectBottomLeft().px24(),
-              "6. Robotics".text.xl2.make().objectBottomLeft().px24(),
-              "7. Artificial Intelligence"
+              "Welcome to the Portfolio App."
                   .text
-                  .xl2
+                  .align(TextAlign.center)
+                  .size(40)
                   .make()
-                  .objectBottomLeft()
-                  .px24(),
-              "8. IoT".text.xl2.make().objectBottomLeft().px24(),
-              "9. Leadership".text.xl2.make().objectBottomLeft().px24(),
-              "10. Community Leading".text.xl2.make().objectBottomLeft().px24(),
+                  .pOnly(top: 100, left: 10),
               SizedBox(
                 height: 20,
               ),
+              ElevatedButton(
+                child: const Text("Continue"),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.deepPurpleAccent,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              "Made with ❤️ by Mayank Agarwal.".text.make(),
             ],
           ),
         ),

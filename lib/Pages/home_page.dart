@@ -37,10 +37,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
-        title: Text(
-          "Portfolio App",
-          style: TextStyle(fontSize: 25),
-        ),
+        title: "Portfolio App".text.xl3.make(),
       ),
       body: Center(
         child: HomePage._widgetOptions.elementAt(_selectedIndex),
