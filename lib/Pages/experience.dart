@@ -177,7 +177,7 @@ class Experience extends StatelessWidget {
                     child: Icon(CupertinoIcons.hand_point_right)
                         .objectCenterLeft(),
                   ),
-                  "Working on a Start-up (TechBeanz)".text.bold.xl2.make(),
+                  "Working on a Start-up \n(TechBeanz)".text.bold.xl2.make(),
                 ]),
                 SizedBox(
                   height: 10,

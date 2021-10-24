@@ -22,7 +22,7 @@ class Education extends StatelessWidget {
                       padding: const EdgeInsets.all(10.0),
                       child: Icon(CupertinoIcons.building_2_fill),
                     ),
-                    "Noida Institute of Engineering \nand Technology"
+                    "Noida Institute of \nEngineering and \nTechnology"
                         .text
                         .xl3
                         .make(),
